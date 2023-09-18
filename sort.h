@@ -41,4 +41,5 @@ bool isFound(vector<Student*> &p, string data,int input);
 int binarySearch(vector<Student*> &p, string data, int input);
 void selectedBy(vector<Student*> &p, int input);
 bool isGreater(string s1, string s2);
+string AllToUpper(string s1);
 #endif

@@ -401,48 +401,24 @@ bool isFound(vector<Student*> &p, string data,int input)
  */
 bool isGreater(string s1, string s2)
 {
-    if(toupper(s1[0]) == toupper(s2[0]))
-    {
-        if(toupper(s1[1]) == toupper(s2[1]))
-        {
-            if(toupper(s1[2]) == toupper(s2[2]))
-            {
-                if(toupper(s1[3]) == toupper(s2[3]))
-                {
-                    if(toupper(s1[4]) == toupper(s2[4]))
-                    {
-                        return true;
-                    }
-                    
-                    if(toupper(s1[4]) > toupper(s2[4]))
-                    {
-                        return true;
-                    }
-                        
-                }
-                if(toupper(s1[3]) > toupper(s2[3]))
-                    {
-                        return true;
-                    }
-            
-            }
-            if(toupper(s1[2])>toupper(s2[2]))
-                {
-                    return true;
-                }
-        }
-        if(toupper(s1[1])>toupper(s2[1]))
-        {
-            return true;
-        } 
-    }
-    if(toupper(s1[0])>toupper(s2[0]))
+    if(AllToUpper(s1)>AllToUpper(s2))
     {
         return true;
     }
-    else
-    {
-        return false;
-    }
     return false;
+}
+/**
+ * @brief returns string as all upper case without changing the original string for comparisons
+ * 
+ * @param s1 
+ * @return string 
+ */
+string AllToUpper(string s1)
+{
+    string s2 = s1;
+    for(int i = 0; i<(int)s1.length(); i++)
+    {
+        s2[i] = toupper(s1[i]);
+    }
+    return s2;
 }
